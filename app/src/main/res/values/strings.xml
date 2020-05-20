@@ -1,0 +1,18 @@
+<resources>
+    <string name="app_name">New Application</string>
+    <string name="service_name">MyMediaService</string>
+
+    <string name="start">播放</string>
+    <string name="pause">暂停</string>
+    <string name="stop">停止</string>
+    <string name="home">首页</string>
+    <string name="onlien">在线</string>
+    <string name="local">本地</string>
+    <string name="next">下一曲</string>
+    <string name="last">上一曲</string>
+    <string name="actionSet">均衡器</string>
+    <string name="addLocal">导入本地</string>
+    <string name="finish">退出</string>
+    <string name="doc_sure">确定</string>
+    <string name="todo">TODO</string>
+</resources>

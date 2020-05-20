@@ -1,0 +1,138 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+    <androidx.viewpager.widget.ViewPager
+        android:id="@+id/view_pager"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"/>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@color/colorHiu"
+        android:orientation="horizontal" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <ImageButton
+            android:id="@+id/imageButton"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_margin="10dp"
+            android:onClick="onClick"
+            android:src="@drawable/ic_launcher_background" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:id="@+id/ll"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="2"
+                android:gravity="center_vertical"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/musicName"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:lines="1"
+                    android:text="暂无" />
+
+                <Button
+                    android:id="@+id/pause"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:layout_weight="1"
+                    android:onClick="onClick_"
+                    android:text="@string/last"
+                    android:visibility="gone" />
+
+                <!--<ImageButton
+                    android:id="@+id/start"
+                    android:layout_width="35dp"
+                    android:layout_height="35dp"
+                    android:onClick="onClick_"
+                    android:background="@mipmap/stop"
+                    android:layout_marginStart="16dp"
+                    android:layout_marginEnd="10dp"/>-->
+                <com.yy.music.view.PlayBtnView
+                    android:id="@+id/start_view"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_margin="4dp"
+                    android:onClick="onClick" />
+
+                <com.yy.music.view.NextBtnView
+                    android:id="@+id/next_view"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_marginRight="10dp"
+                    android:onClick="onClick" />
+
+                <!--<ImageView
+                    android:id="@+id/stop"
+                    android:layout_width="35dp"
+                    android:layout_height="35dp"
+                    android:scaleType="fitCenter"
+                    android:onClick="onClick_"
+                    android:layout_marginEnd="20dp"
+                    android:src="@mipmap/xiayiqu"/>-->
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_marginStart="2dp"
+                android:layout_marginEnd="2dp"
+                android:layout_weight="1"
+                android:gravity="center_vertical"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/start_tv"
+                    android:layout_width="24dp"
+                    android:layout_height="wrap_content"
+                    android:text="00:00"
+                    android:textSize="8sp" />
+
+                <SeekBar
+                    android:id="@+id/music_seek"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1" />
+
+                <TextView
+                    android:id="@+id/end_tv"
+                    android:layout_width="24dp"
+                    android:layout_height="wrap_content"
+                    android:text="00:00"
+                    android:textSize="8sp" />
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@color/colorHiu"
+        android:orientation="horizontal" />
+    <com.google.android.material.tabs.TabLayout
+        android:id="@+id/tab_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+</LinearLayout>

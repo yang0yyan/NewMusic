@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<paths>
+    <!--
+
+    //代表的目录即为：Environment.getExternalStorageDirectory()/Android/data/com.example.myapplication/
+    <external-path
+        name="files_root"
+        path="Android/data/com.example.myapplication/" />
+
+
+    //代表的目录即为：Environment.getExternalStorageDirectory()
+    <external-path
+        name="external_storage_root"
+        path="." />
+    //代表的目录即为：Environment.getExternalStorageDirectory()/Download-->
+    <external-path
+        name="external"
+        path="/" />
+</paths>
+
+<!--    //每个节点都支持两个属性：name+path
+    //path：需要临时授权访问的路径（.代表所有路径）
+    //name：就是你给这个访问路径起个名字
+    <?xml version="1.0" encoding="utf-8"?>
+<paths xmlns:android="http://schemas.android.com/apk/res/android">
+<root-path name="root" path="" /> //代表设备的根目录new File("/");
+<files-path name="files" path="" /> //context.getFilesDir()
+<cache-path name="cache" path="" /> //context.getCacheDir()
+<external-path name="external" path="" /> //Environment.getExternalStorageDirectory()
+<external-files-path name="name" path="path" /> //context.getExternalFilesDirs()
+<external-cache-path name="name" path="path" /> //getExternalCacheDirs()
+</paths>-->
+
+<!--<provider
+android:name="androidx.core.content.FileProvider"
+android:authorities="com.example.myapplication.fileprovider"
+android:exported="false"
+android:grantUriPermissions="true">
+<meta-data
+    android:name="android.support.FILE_PROVIDER_PATHS"
+    android:resource="@xml/file_paths" />
+</provider>-->
+
+
+<!--    if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.N) {
+    Uri uri = FileProvider.getUriForFile(CameraActivity.this, "app的包名.fileProvider", photoFile);
+    } else {
+    Uri uri = Uri.fromFile(photoFile);
+    }-->
